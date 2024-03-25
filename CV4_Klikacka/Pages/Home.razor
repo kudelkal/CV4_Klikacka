@@ -1,0 +1,36 @@
+﻿@page "/"
+@inject IJSRuntime JS 
+
+<PageTitle>Klikačka</PageTitle>
+
+<h1>Klikačka!</h1>
+
+<div>
+    <table>
+        <tbody>
+            @for (int i = 0; i < grafika.Matice.GetLength(0); i++)
+            {
+                var radka = i;
+                <tr>
+                    @for (int j = 0; j < grafika.Matice.GetLength(1); j++)
+                    {
+                        var sloupec = j;
+                        <td class="@grafika.Matice[radka,sloupec].StyleClassName" @onclick="() => grafika.OnCellClick(grafika.Matice[radka,sloupec])">
+                            @grafika.Matice[i,j].Hodnota
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code{
+    private Models.Grafika grafika = new Models.Grafika();
+
+    // private void OnCellClick(Models.Bunka bunka)
+    // {
+    //     var zprava = $"Buňka na řádku {bunka.Radka} a sloupci {bunka.Sloupec} má hodnotu {bunka.Hodnota}";
+    //     JS.InvokeVoidAsync("alert", zprava);
+    // }
+}
