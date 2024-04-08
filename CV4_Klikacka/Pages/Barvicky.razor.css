@@ -1,0 +1,47 @@
+﻿body{
+
+}
+
+table {
+    border-spacing: 0;
+    border: black 1px solid;
+}
+
+.vyber-barev {
+    margin-bottom: 20px;
+}
+
+td {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+    td.selected {
+        border: rgb(214, 217, 24) 4px solid;
+    }
+
+.barva-0 {
+    background-color: white;
+    color: black;
+}
+
+.barva-1 {
+    background-color: black;
+    color: white;
+}
+
+.barva-2 {
+    background-color: rgb(215, 0, 0);
+    color: black;
+}
+
+.barva-3 {
+    background-color: rgb(0, 12, 181);
+    color: white;
+}
+
+.barva-4 {
+    background-color: rgb(12, 171, 10);
+    color: black;
+}

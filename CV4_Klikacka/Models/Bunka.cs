@@ -15,7 +15,7 @@
 
         public int Hodnota { get; private set; }
         public int StyleIndexBarvy { get; set; } = 0;
-        public string StyleClassName => $"barva-{StyleIndexBarvy}";
+        public virtual string StyleClassName => $"barva-{StyleIndexBarvy}";
 
 
     }
